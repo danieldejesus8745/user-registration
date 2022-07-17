@@ -1,5 +1,5 @@
 # User Registration
-User registration system
+User registration service
 
 # Stack
     - Java
@@ -7,3 +7,4 @@ User registration system
     - Postgres
     - Jpa
     - Lombok
+    - Spring Security
