@@ -6,9 +6,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class UserRegistrationApplicationTests {
 
-	@Test
-	void shouldLoadMainClass() {
-		UserRegistrationApplication.main(new String[] {});
-	}
+//	@Test
+//	void shouldLoadMainClass() {
+//		UserRegistrationApplication.main(new String[] {});
+//	}
 
 }

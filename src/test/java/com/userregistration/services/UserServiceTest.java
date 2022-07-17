@@ -8,12 +8,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
@@ -24,6 +23,8 @@ class UserServiceTest {
 
     @Mock
     private UserRepository userRepository;
+    @Mock
+    private PasswordEncoder passwordEncoder;
 
     @BeforeEach
     void setUp() {
@@ -59,6 +60,7 @@ class UserServiceTest {
         User user = new User();
         user.setPassword(password);
         when(userRepository.findByEmail(any())).thenReturn(Optional.of(user));
+        when(passwordEncoder.matches(any(), any())).thenReturn(true);
         UserDTO resultTest = userService.getUser("", password);
         Assertions.assertNotNull(resultTest);
     }

@@ -1,7 +1,6 @@
 package com.userregistration.controllers;
 
 import com.userregistration.dto.UserDTO;
-import com.userregistration.entities.User;
 import com.userregistration.services.UserService;
 import com.userregistration.utils.Messages;
 import lombok.RequiredArgsConstructor;
