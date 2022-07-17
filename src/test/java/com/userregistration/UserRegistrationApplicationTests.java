@@ -7,7 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 class UserRegistrationApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void shouldLoadMainClass() {
+		UserRegistrationApplication.main(new String[] {});
 	}
 
 }
